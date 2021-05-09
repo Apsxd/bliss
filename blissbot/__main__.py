@@ -35,20 +35,11 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Guide || Help", url="https://t.me/Bliss_musicbot"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "Group", url="https://t.me/unitedbotsupport"
-                    ),
-                    InlineKeyboardButton(
-                        "Developers", url="https://t.me/unitedbotsupport"
+                        text="Guide || help", url="https://t.me/bliss_musicbot"
                     )
                 ]
             ]
         )
-    )
     else:
         btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)

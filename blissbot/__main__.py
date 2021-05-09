@@ -35,11 +35,20 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="GUIDE", url="https://t.me/Bliss_musicbot"
+                        "Guide || Help", url="https://t.me/Bliss_musicbot"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Group", url="https://t.me/unitedbotsupport"
+                    ),
+                    InlineKeyboardButton(
+                        "Developers", url="https://t.me/unitedbotsupport"
                     )
                 ]
             ]
         )
+    )
     else:
         btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)
@@ -56,5 +65,5 @@ async def help(client, message):
 
 OWNER_ID.append(1587091205)
 app.start()
-LOGGER.info("bliss started.")
+LOGGER.info("bliss started")
 idle()

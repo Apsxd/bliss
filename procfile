@@ -1,1 +1,1 @@
-worker: python3 -m alexasongbot
+worker: python3 -m blissbot

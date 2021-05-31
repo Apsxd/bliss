@@ -33,13 +33,33 @@ async def start(client, message):
     if message.chat.type == "private":
         btn = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        text="Guide || help", url="https://t.me/tubots/188"
-                    )
-                ]
-            ]
-        )
+                        [
+                            InlineKeyboardButton(
+                                text="ADD ME TO GROUP",
+                                url="t.me/{}?startgroup=true".format(
+                                    context.bot.username
+                                ),
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="SUPPORT",
+                                url=f"https://t.me/tubots",
+                            ),
+                            InlineKeyboardButton(
+                                text="SOURCE CODE",
+                                url="https://t.me/unitedbots",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="STARTUP GUIDE",
+                                url="https://t.me/unitedbotsupport",
+                            )
+                        ],
+                    ]
+                ),
+            )
     else:
         btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)

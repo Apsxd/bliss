@@ -10,9 +10,10 @@ from blissbot.basi_mon import ignore_blacklisted_users
 from blissbot.sql.chat_sql import add_chat_to_db
 
 start_text = """
-Hey [{}](tg://user?id={}),
-Bliss🎶 is a fastest song bot download songs using this bot 
-🎶 check user manual on clicking the url button
+Heya! [{}](tg://user?id={}),
+This fastest song downloader bot in telegram This bot helps you download songs from youtube and jio saavan 
+
+❓**check user manual on clicking the url button**❓
 """
 
 owner_help = """

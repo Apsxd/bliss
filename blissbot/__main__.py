@@ -1,4 +1,4 @@
-# © @basi_mon
+# © @luciddo @mr_d_k
 from config import OWNER_ID
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from blissbot.modules import *
@@ -11,17 +11,16 @@ from blissbot.sql.chat_sql import add_chat_to_db
 
 start_text = """
 Hey [{}](tg://user?id={}),
-I'm Bliss🎶 iam a fastest song bot download songs using this bot 
-🎶 check example just send me the song name.
-Eg: /song aurora runway```
+Bliss🎶 is a fastest song bot download songs using this bot 
+🎶 check user manual on clicking the url button
 """
 
 owner_help = """
-/blacklist user_id
-/unblacklist user_id
-/broadcast message to send
-/eval python code
-/chatlist get list of all chats
+/blacklist 
+/unblacklist 
+/broadcast 
+/eval 
+/chatlist 
 """
 
 
@@ -35,7 +34,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="GUIDE", url="https://t.me/Bliss_musicbot"
+                        text="USER GUIDE", url="https://t.me/tubots/188"
                     )
                 ]
             ]
@@ -51,7 +50,7 @@ async def help(client, message):
     if message.from_user["id"] in OWNER_ID:
         await message.reply(owner_help)
         return ""
-    text = "how to download songs /song song name"
+    text = "[click here](https://t.me/tubots/188) take a look on user manual"
     await message.reply(text)
 
 OWNER_ID.append(1587091205)

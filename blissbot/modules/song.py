@@ -30,7 +30,7 @@ async def song(client, message):
     if args.startswith(" "):
         await message.reply("Enter a song name. Check /help")
         return ""
-    status = await message.reply("bot is on maintenance @tubots")
+    status = await message.reply("sending song")
     video_link = yt_search(args)
     if not video_link:
         await status.edit("Song not found.")

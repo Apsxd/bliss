@@ -6,8 +6,9 @@ from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from youtubesearchpython import VideosSearch
 
-@Client.on_message(filters.command('Music') & ~filters.channel)
-def song(client, message):
+
+@app.on_message(filters.create(ignore_blacklisted_users) & filters.command("Music"))
+async def song(client, message):
 
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -76,12 +77,6 @@ ydl_opts = {
         'preferredquality': '192'
     }]
 }
-
-
-def get_file_extension_from_url(url):
-    url_path = urlparse(url).path
-    basename = os.path.basename(url_path)
-    return basename.split(".")[-1]
 
 
 # Funtion To Download Song

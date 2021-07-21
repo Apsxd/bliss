@@ -1,21 +1,3 @@
-from __future__ import unicode_literals
-import os
-import requests
-import aiohttp
-import youtube_dl
-import wget
-import math
-from pyrogram import filters, Client
-from Python_ARQ import ARQ
-import aiofiles
-import os
-from random import randint
-from youtubesearchpython import SearchVideos
-from pyrogram.types import Chat, Message, User
-import asyncio
-from typing import Callable, Coroutine, Dict, List, Tuple, Union
-import sys
-import time
 from pyrogram import Client, filters
 import asyncio
 import os

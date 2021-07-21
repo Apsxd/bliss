@@ -1,5 +1,5 @@
 from envparse import env
-from Blissbot import LOGGER
+from blissbot import LOGGER
 
 DEFAULTS = {
     "LOAD_MODULES": True,

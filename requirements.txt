@@ -25,4 +25,4 @@ html2text
 lyricsgenius
 envparse
 tswift
-+git https://github.com/HasibulKabir/heroku-buildpack-ffmpeg-ffprobe
+

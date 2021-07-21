@@ -2,6 +2,7 @@ pyrogram
 tgcrypto
 pytube
 sqlalchemy==1.3.23
+psycopg2
 TgCrypto
 py-tgcalls
 python-dotenv

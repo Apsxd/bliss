@@ -7,8 +7,9 @@ from pyrogram.types import InlineKeyboardButton
 from youtubesearchpython import VideosSearch
 
 
-@app.on_message(filters.create(ignore_blacklisted_users) & filters.command("Music"))
-async def song(client, message):
+@Client.on_message(filters.command('music') & ~filters.channel)
+def song(client, message):
+
 
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -29,11 +30,6 @@ async def song(client, message):
         thumb_name = f'thumb{title}.jpg'
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, 'wb').write(thumb.content)
-
-
-        duration = results[0]["duration"]
-        url_suffix = results[0]["url_suffix"]
-        views = results[0]["views"]
 
     except Exception as e:
         m.edit(
@@ -63,43 +59,3 @@ async def song(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-
-
-
-
-
-ydl_opts = {
-    'format': 'bestaudio/best',
-    'writethumbnail': True,
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '192'
-    }]
-}
-
-
-# Funtion To Download Song
-async def download_song(url):
-    song_name = f"{randint(6969, 6999)}.mp3"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            if resp.status == 200:
-                f = await aiofiles.open(song_name, mode='wb')
-                await f.write(await resp.read())
-                await f.close()
-    return song_name
-
-is_downloading = False
-
-
-def time_to_seconds(time):
-    stringt = str(time)
-    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
-
-
-
-
-
-
-

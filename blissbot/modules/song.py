@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from youtubesearchpython import VideosSearch
 
-@Client.on_message(filters.command('song') & ~filters.channel)
+@Client.on_message(filters.command('Music') & ~filters.channel)
 def song(client, message):
 
     user_id = message.from_user.id 

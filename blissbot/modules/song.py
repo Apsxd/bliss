@@ -23,9 +23,6 @@ from pytube import YouTube
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from youtubesearchpython import VideosSearch
-from blissbot.basi_mon import ignore_blacklisted_users, get_arg
-from blissbot import app, LOGGER
-from blissbot.sql.chat_sql import add_chat_to_db
 
 @Client.on_message(filters.command('song') & ~filters.channel)
 def song(client, message):

@@ -61,7 +61,7 @@ async def ytmusic(client, message: Message):
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"**Video title** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**uploaded by :** `@Missblissrobot`"
+    capy = f"**VIDEO TITLE :** `{thum}` \n**UPLOADED BY :** @Missblissrobot"
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
@@ -133,7 +133,7 @@ async def ytmusic(client, message: Message):
         await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
         return
     c_time = time.time()
-    capy = f"**Song Name :** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**Uploaded by :** `@Missblissrobot`"
+    capy = f"**SONG NAME :** `{thum}` \n**UPLOADED BY :** @Missblissrobot"
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
         message.chat.id,
@@ -147,7 +147,7 @@ async def ytmusic(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"`Uploading {urlissed} Song From YouTube Music!`",
+            f"Uploading {urlissed} From YouTube",
             file_stark,
         ),
     )
@@ -162,7 +162,7 @@ async def _(client, message):
     lel = await message.reply("Searching For Lyrics.....")
     query = message.text
     if not query:
-        await lel.edit("`What I am Supposed to find `")
+        await lel.edit("What I am Supposed to find")
         return
 
     song = ""
@@ -198,8 +198,8 @@ async def lyrics(client, message):
         pass
     else:
         await message.reply(
-            "`Error: please use '-' as divider for <artist> and <song>`\n"
-            "eg: `.glyrics Nicki Minaj - Super Bass`"
+            "`Error: please use - as divider for <artist> and <song>`\n"
+            "eg: /glyrics alone - Marshmellow"
         )
         return
 

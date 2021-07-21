@@ -23,3 +23,5 @@ wget
 regex
 html2text
 lyricsgenius
+envparse
+tswift

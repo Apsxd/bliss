@@ -61,7 +61,7 @@ async def ytmusic(client, message: Message):
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"**Video Name ➠** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**Link :** `{mo}`"
+    capy = f"**VIDEO NAME** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**uploaded by :** `@Missblissrobot`"
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
@@ -133,7 +133,7 @@ async def ytmusic(client, message: Message):
         await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
         return
     c_time = time.time()
-    capy = f"**Song Name :** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**Link :** `{mo}`"
+    capy = f"**Song Name :** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**Uploaded by :** `@Missblissrobot`"
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
         message.chat.id,

@@ -6,19 +6,26 @@ import youtube_dl
 import wget
 import math
 from pyrogram import filters, Client
-from youtube_search import YoutubeSearch
 from Python_ARQ import ARQ
-from urllib.parse import urlparse
 import aiofiles
 import os
 from random import randint
 from youtubesearchpython import SearchVideos
-from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 import asyncio
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
 import sys
 import time
+from pyrogram import Client, filters
+import asyncio
+import os
+from pytube import YouTube
+from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton
+from youtubesearchpython import VideosSearch
+from blissbot.basi_mon import ignore_blacklisted_users, get_arg
+from blissbot import app, LOGGER
+from blissbot.sql.chat_sql import add_chat_to_db
 
 @Client.on_message(filters.command('song') & ~filters.channel)
 def song(client, message):

@@ -12,7 +12,7 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-
+from blissbot import app
 
 def get_user(message: Message, text: str) -> [int, str, None]:
     if text is None:

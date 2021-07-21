@@ -14,6 +14,7 @@ from youtubesearchpython import SearchVideos
 
 from blissbot.conf import get_str_key
 from blissbot.pluginshelper import get_text, progress
+from blissbot import app
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 

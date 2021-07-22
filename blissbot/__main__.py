@@ -41,16 +41,6 @@ async def start(client, message):
             ]
         )
     else:
-        btn = InlinekeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="support", url="https://t.me/unitedbotsupport"
-                    )
-                ]
-            ]
-        )
-    else:
         btn = none
     await message.reply(start_text.format(name, user_id), reply_markup=btn)
     add_chat_to_db(str(chat_id))

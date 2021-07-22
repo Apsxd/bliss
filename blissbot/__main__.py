@@ -41,7 +41,17 @@ async def start(client, message):
             ]
         )
     else:
-        btn = None
+        btn = InlinekeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="how to use manual", url="https://t.me/tubots/188"
+                    )
+                ]
+            ]
+        )
+    else:
+        btn = none
     await message.reply(start_text.format(name, user_id), reply_markup=btn)
     add_chat_to_db(str(chat_id))
 

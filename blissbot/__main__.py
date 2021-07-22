@@ -35,12 +35,11 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "How to use", url="https://t.me/tubots/188"
-                    ) 
+                        text="how to use manual", url="https://t.me/tubots/188"
+                    )
                 ]
             ]
         )
-    )
     else:
         btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)

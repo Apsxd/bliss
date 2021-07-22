@@ -11,9 +11,9 @@ from blissbot.sql.chat_sql import add_chat_to_db
 
 start_text = """
 Heya! [{}](tg://user?id={}),
-This fastest song downloader bot in telegram This bot helps you download songs from youtube and jio saavan 
+**This is a simple bot which can download all songs you need**
 
-❓**check user manual on clicking the url button**❓
+❓check user manual on clicking the url button❓
 """
 
 owner_help = """
@@ -35,11 +35,22 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="USER GUIDE", url="https://t.me/tubots/188"
+                        "Updates channel", url="https://t.me/tubots",
                     )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Support Group", url="https://t.me/unitedbotsupport"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "How to use", url="https://t.me/tubots/188"
+                    ) 
                 ]
             ]
         )
+    )
     else:
         btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)

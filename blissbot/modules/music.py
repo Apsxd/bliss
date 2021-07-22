@@ -1,3 +1,12 @@
+#© @laylarobot @luciddo 
+# codes are taken from others iam not owner of any code
+# respect :) fuck kangers 
+# read full code
+# ask at our support group.
+# thank you
+
+
+
 import asyncio
 import io
 import os

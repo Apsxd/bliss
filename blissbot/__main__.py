@@ -35,16 +35,6 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Updates channel", url="https://t.me/tubots",
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "Support Group", url="https://t.me/unitedbotsupport"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
                         "How to use", url="https://t.me/tubots/188"
                     ) 
                 ]

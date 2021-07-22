@@ -116,7 +116,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**FILE NAME:** {} \n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n **Downloading by : ** @Missblissrobot ".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)

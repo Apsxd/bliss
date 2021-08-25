@@ -1,6 +1,6 @@
 {
     "name": "blissbot",
-    "description": "telegram fastest song bot",
+    "description": "telegram song dl bot",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org.",
@@ -21,7 +21,7 @@
     },
     "buildpacks": [
         {
-            "url": "heroku/python"
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
         }
     ],
     "addons": [

@@ -14,7 +14,7 @@ from youtubesearchpython import SearchVideos
 
 from blissbot.conf import get_str_key
 from blissbot.pluginshelper import get_text, progress
-from blissbot import pbot
+from blissbot import app
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 
@@ -84,7 +84,7 @@ async def ytmusic(client, message: Message):
             os.remove(files)
 
 
-@pbot.on_message(filters.command(["music", "song"]))
+@app.on_message(filters.command(["music", "song"]))
 async def ytmusic(client, message: Message):
     urlissed = get_text(message)
     if not urlissed:
@@ -157,7 +157,7 @@ async def ytmusic(client, message: Message):
             os.remove(files)
 
 
-@pbot.on_message(filters.command(["lyric", "lyrics"]))
+@app.on_message(filters.command(["lyric", "lyrics"]))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics.....")
     query = message.text
@@ -191,7 +191,7 @@ async def _(client, message):
         await lel.edit(reply)  # edit or reply
 
 
-@pbot.on_message(filters.command(["glyric", "glyrics"]))
+@app.on_message(filters.command(["glyric", "glyrics"]))
 async def lyrics(client, message):
 
     if r"-" in message.text:

@@ -19,7 +19,7 @@ from blissbot import app
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 
 
-@pbot.on_message(filters.command(["vsong", "video"]))
+@app.on_message(filters.command(["vsong", "video"]))
 async def ytmusic(client, message: Message):
     urlissed = get_text(message)
 

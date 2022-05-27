@@ -35,7 +35,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="how to use manual", url="https://t.me/tubots/188"
+                        text="Credits", url="https://t.me/tubots"
                     )
                 ]
             ]

